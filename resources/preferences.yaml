@@ -1,0 +1,10 @@
+nav:
+  content:
+    'content::globals':
+      action: '@modify'
+      reorder: true
+      children:
+        'content::globals::forms': '@inherit'
+        'content::globals::general': '@inherit'
+        'content::globals::seo': '@inherit'
+    'content::globals::site': '@move'

@@ -1,0 +1,37 @@
+title: Settings
+data:
+  address: '268 Hollywood Boulevard'
+  address_2: 'Adelaide SA 5000'
+  phone_number: '1300 134 415'
+  phone_link: '1300134415'
+  social_links:
+    -
+      id: lj83d91y
+      icon: facebook-square
+      link: 'https://www.facebook.com/mitydigital'
+      title: 'Find us on Facebook'
+    -
+      id: lj83fi3c
+      icon: twitter
+      link: 'https://twitter.com/mitydigital'
+      title: 'Connect with us on Twitter'
+  about: "The latest releases in the bestest cinemas. It's a word, look it up."
+  copyright: 'Copyright {{ now format="Y" }} CineSite Cinemas. All rights reserved.'
+  acknowledgement_of_country: '{{ site:name }} acknowledges and pays respect to the past, present and future Traditional Custodians and Elders of this nation and the continuation of cultural, spiritual and educational practices of Aboriginal and Torres Strait Islander peoples.'
+  footer_links:
+    -
+      id: lz6jgrxk
+      link: 'entry::17a9b3ed-0537-4970-aaf4-9a8455361c72'
+      label: 'Session times'
+    -
+      id: lz6loqir
+      link: 'entry::cb320cbc-38b6-49e0-9ee2-4d7bb629eff6'
+      label: Movies
+    -
+      id: lz6i8qbv
+      link: 'entry::696bffa2-e8d1-45d3-8f51-1c4d9f2e54e5'
+      label: Acknowledgements
+    -
+      id: lj88bk60
+      link: 'entry::8dd5a5a4-179d-432b-89f2-350ac8817fb2'
+      label: 'Privacy Policy'

@@ -1,0 +1,66 @@
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# IDE
+# PHPStorm / Nova / VS Code
+/.idea
+/.nova
+/.vscode
+
+# Statamic
+/public/build
+/public/hot
+/public/images
+/public/img
+/public/static
+/public/vendor/horizon
+/public/storage
+/public/vendor/iconamic
+/public/vendor/statamic-bard-ipsum
+/public/vendor/statamic
+/storage/forms/*
+
+# Laravel
+/lang/en.json
+/node_modules
+/storage/*.key
+/storage/media-library
+/vendor
+
+.env
+.env.backup
+.phpunit.result.cache
+.php_cs.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# Laravel IDE helper
+*.meta.*
+_ide_*

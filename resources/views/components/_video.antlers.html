@@ -1,0 +1,21 @@
+<div x-data="{ open: false }">
+    <div class="relative z-50" >
+        <div class="fixed inset-0 z-50 overscroll-contain flex items-center justify-center"
+             x-show="open"
+             x-transition.opacity>
+            <div @click.prevent="open = false" class="absolute inset-0 bg-black bg-opacity-70"></div>
+            <div class="relative z-50 bg-white w-full max-w-screen-md shadow-xl">
+                {{ if video && video | is_embeddable }}
+                <iframe class="aspect-video w-full" src="{{ video | embed_url }}"></iframe>
+                {{ else }}
+                <video class="aspect-video w-full" src="{{ video | embed_url }}"></video>
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+
+    <a class="px-4 py-1.5 bg-orange-500 text-xs rounded text-white font-bold transition-colors hover:bg-orange-600"
+       href="{{ trailer }}"
+       target="_blank"
+       @click.prevent="open = true">{{ slot }}</a>
+</div>

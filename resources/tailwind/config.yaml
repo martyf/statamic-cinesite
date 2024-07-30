@@ -1,0 +1,9 @@
+colours:
+  - blue
+  - red
+  - green
+classes:
+  - text-[colour]-500
+  - bg-[colour]-50
+  - bg-[colour]-500
+  - hover:bg-[colour]-600

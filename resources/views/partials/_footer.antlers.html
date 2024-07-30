@@ -1,0 +1,72 @@
+<footer class="z-20 bg-black text-gray-600 py-10 relative
+               px-6 md:px-8">
+
+    {{# WAVE #}}
+    <div class="w-full absolute -top-px inset-x-0 text-white overflow-x-hidden
+                h-5 md:h-10 xl:h-12 ">
+        {{ iconamic icon="footer" path="svg" path_helper="resource_path" }}
+    </div>
+
+    <div class="max-w-screen-xl mx-auto text-sm">
+        <div>
+            <picture>
+                <source srcset="/assets/logo/cinesite-reversed.webp 1x, /assets/logo/cinesite-reversed-2x.webp 2x"
+                        type="image/webp">
+                <source srcset="/assets/logo/cinesite-reversed.png 1x, /assets/logo/cinesite-reversed-2x.png 2x"
+                        type="image/png">
+                <img alt="{{ site:name }}"
+                     class="transition-all w-auto
+                            h-6 sm:h-6 lg:h-8"
+                     height="38"
+                     src="/assets/logo/cinesite-reversed-2x.png"
+                     width="205">
+            </picture>
+            <div class="mt-2 text-gray-400">{{ settings:about }}</div>
+        </div>
+
+        <div class="mt-3 text-xs
+                    lg:flex lg:justify-between">
+            <div class="space-y-1">
+                <ul class="flex items-center space-x-3">
+
+                    {{ settings:footer_links }}
+                    <li>
+                        {{ link:url | is_external_url }}
+                        <a class="block transition-colors
+                                  hover:text-yellow-500"
+                           href="{{ link }}"
+                           {{ if link:url | is_external_url }} target="_blank" {{ /if }}
+                        title="{{ label }}">{{ label }}</a>
+                    </li>
+                    {{ /settings:footer_links }}
+                </ul>
+
+                <div>Call us on <a class="transition-colors hover:text-yellow-500" href="tel:{{ settings:phone_link }}">{{ settings:phone_number }}</a></div>
+                <div>{{ settings:address }}<br>{{ settings:address_2 }}</div>
+
+                <div class="pt-2">{{ settings:copyright }}</div>
+            </div>
+
+            <div class="max-w-lg space-y-2 mt-6
+                        lg:mt-0 lg:text-right ">
+                <div>
+                    {{ settings:acknowledgement_of_country }}
+                </div>
+
+                {{# MITY DIGITAL CREDIT #}}
+                <div class="max-w-screen-xl mx-auto flex lg:justify-end">
+                    <a class="flex items-center transition-colors
+                              text-gray-600 group hover:text-yellow-500"
+                       href="https://www.mity.com.au"
+                       target="_blank"
+                       title="Web design and development by Mity Digital">
+                        <span class="text-xs mr-1 whitespace-nowrap">Web design and development by</span>
+                        <img alt="Web design and development by Mity Digital"
+                             class="opacity-80 w-auto h-4 transition-opacity grayscale group-hover:grayscale-0"
+                             height="28" src="/mity/mity-digital.svg" width="150"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>

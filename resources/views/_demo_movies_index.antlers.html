@@ -1,0 +1,28 @@
+<div class="px-6 md:px-8
+            mt-6 mb-8 md:mt-4 md:mb-16">
+
+    {{# HEADING 1 #}}
+    <div class="max-w-screen-xl mx-auto
+                mb-6 md:mb-10">
+        <h1 class="font-bold text-2xl text-pretty md:text-3xl">{{ heading ?? title }}</h1>
+    </div>
+
+    {{# PAGE CONTENT #}}
+    <div class="max-w-screen-xl mx-auto space-y-8
+                mb-8 md:mb-16 ">
+        <div class="prose max-w-full">
+            {{ content }}
+        </div>
+
+        <div class="grid grid-cols-5 gap-8">
+            {{ collection:movies }}
+            <div>
+                <a href="{{ url }}" class="relative group rounded-lg overflow-hidden block">
+                    {{ partial:components/image :image="poster" preset="poster" class="transition-all group-hover:scale-105" }}
+                </a>
+            </div>
+            {{ /collection:movies }}
+        </div>
+    </div>
+
+</div>

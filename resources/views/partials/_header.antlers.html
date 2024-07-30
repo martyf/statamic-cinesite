@@ -1,0 +1,59 @@
+<header class="relative">
+    <div class="bg-gradient-to-b from-yellow-400 to-yellow-300
+                relative z-50 inset-x-0 top-0
+                px-6 md:px-8
+                pt-4 md:pt-6
+                pb-12 md:pb-16 lg:pb-20 xl:pb-28">
+            <div class="max-w-screen-xl mx-auto flex items-center justify-between">
+
+            {{# LOGO #}}
+            <a class="relative z-50" href="/">
+                <picture>
+                    <source srcset="/assets/logo/cinesite.webp 1x, /assets/logo/cinesite-2x.webp 2x"
+                            type="image/webp">
+                    <source srcset="/assets/logo/cinesite.png 1x, /assets/logo/cinesite-2x.png 2x"
+                            type="image/png">
+                    <img alt="{{ site:name }}"
+                         class="transition-all w-auto
+                                -mt-1
+                                h-8 sm:h-8 lg:h-10"
+                         height="38"
+                         src="/assets/logo/cinesite-2x.png"
+                         width="205">
+                </picture>
+            </a>
+
+            {{# NAV #}}
+            <div class="flex items-center">
+                <nav class="relative z-50" role="navigation">
+                    <ul class="flex items-center font-bold gap-x-6">
+                        {{ nav:main select="title|url" }}
+                        <li class="hidden md:block">
+                            <a class="transition-colors
+                                      hover:text-orange-500
+                                      {{ if is_current }} font-bold {{ /if }}"
+                               href="{{ url }}">{{ title }}</a>
+                        </li>
+                        {{ /nav:main }}
+
+                        <li>
+                            <a class="bg-orange-500 text-white px-5 py-2.5 transition-colors rounded
+                                      hover:bg-orange-600"
+                               href="#">Buy tickets</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+
+        {{# POPCORN #}}
+        {{ partial:components/image image="assets/decoration/popcorn.png" class="absolute inset-y-0 right-0 w-auto max-h-full" }}
+
+        {{# WAVE #}}
+        <div class="w-full absolute -bottom-px inset-x-0 text-amber-400 overflow-x-hidden
+                    h-8 md:h-12 lg:h-16 xl:h-24 ">
+            {{ iconamic icon="header" path="svg" path_helper="resource_path" }}
+        </div>
+    </div>
+</header>

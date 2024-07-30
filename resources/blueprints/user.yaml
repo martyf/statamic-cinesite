@@ -1,0 +1,41 @@
+title: User
+tabs:
+  main:
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+          -
+            handle: email
+            field:
+              type: text
+              input_type: email
+              display: 'Email Address'
+              listable: true
+              input: email
+          -
+            handle: roles
+            field:
+              type: user_roles
+              mode: select
+              width: 50
+              listable: true
+              filterable: false
+          -
+            handle: groups
+            field:
+              type: user_groups
+              mode: select
+              width: 50
+              listable: true
+              filterable: false
+          -
+            handle: avatar
+            field:
+              type: assets
+              max_files: 1
+              container: assets

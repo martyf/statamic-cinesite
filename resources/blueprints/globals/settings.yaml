@@ -1,0 +1,160 @@
+tabs:
+  contact:
+    display: Contact
+    sections:
+      -
+        display: About
+        fields:
+          -
+            handle: address
+            field:
+              type: text
+              display: Address
+              width: 50
+          -
+            handle: address_2
+            field:
+              type: text
+              display: 'Suburb and Postcode'
+              width: 50
+          -
+            handle: phone_number
+            field:
+              type: text
+              display: 'Phone Number'
+              instructions: 'Formatted for display, including spaces.'
+              width: 33
+          -
+            handle: phone_link
+            field:
+              input_type: tel
+              type: text
+              display: 'tel: Phone Number'
+              instructions: 'Phone number formatted for a "tel:" link'
+              width: 33
+      -
+        display: 'Social Media'
+        fields:
+          -
+            handle: social_links
+            field:
+              mode: stacked
+              add_row: 'Add social network'
+              fullscreen: false
+              type: grid
+              display: 'Social Media'
+              listable: false
+              hide_display: true
+              fields:
+                -
+                  handle: icon
+                  field:
+                    path: icons/social-media
+                    path_helper: resource_path
+                    recursive: default
+                    type: iconamic
+                    display: Icon
+                    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M19 9h19.84c2.76 0 5 2.24 5 5v24.84c0 2.76-2.24 5-5 5H14c-2.76 0-5-2.24-5-5V19c0-5.52 4.48-10 10-10ZM61.16 9H81c5.52 0 10 4.48 10 10v19.84c0 2.76-2.24 5-5 5H61.16c-2.76 0-5-2.24-5-5V14c0-2.76 2.24-5 5-5ZM14 56.16h24.84c2.76 0 5 2.24 5 5V86c0 2.76-2.24 5-5 5H19c-5.52 0-10-4.48-10-10V61.16c0-2.76 2.24-5 5-5ZM61.16 56.16H86c2.76 0 5 2.24 5 5V81c0 5.52-4.48 10-10 10H61.16c-2.76 0-5-2.24-5-5V61.16c0-2.76 2.24-5 5-5Z" style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:6px"/></svg>'
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    validate:
+                      - required
+                -
+                  handle: link
+                  field:
+                    input_type: url
+                    antlers: false
+                    type: text
+                    display: Link
+                    icon: text
+                    width: 66
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    validate:
+                      - required
+                      - url
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'Link Title'
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    validate:
+                      - required
+  footer:
+    display: Footer
+    sections:
+      -
+        display: Content
+        instructions: 'Footer content details for the bottom of the site.'
+        fields:
+          -
+            handle: about
+            field: common.text_plain
+            config:
+              display: About
+              width: 100
+          -
+            handle: copyright
+            field:
+              antlers: true
+              type: text
+              display: Copyright
+          -
+            handle: acknowledgement_of_country
+            field:
+              antlers: true
+              type: textarea
+              display: 'Acknowledgement of Country'
+      -
+        display: Legal
+        instructions: 'Useful for your privacy policy and terms of use.'
+        fields:
+          -
+            handle: footer_links
+            field:
+              add_row: 'Add link'
+              fullscreen: false
+              type: grid
+              display: 'Footer links'
+              hide_display: true
+              fields:
+                -
+                  handle: link
+                  field:
+                    type: link
+                    display: Link
+                    icon: link
+                    width: 66
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    validate:
+                      - required
+                -
+                  handle: label
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Label
+                    icon: text
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    validate:
+                      - required

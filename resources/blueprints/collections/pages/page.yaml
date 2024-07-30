@@ -1,0 +1,53 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: General
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              listable: true
+          -
+            handle: heading
+            field:
+              type: text
+              display: Heading
+              instructions: "This is your entry's main heading, commonly known as the `h1` or 'Heading 1'. If omitted, the Title will be used."
+          -
+            handle: content
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Content
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+          -
+            handle: template
+            field:
+              type: template
+              display: Template

@@ -1,0 +1,9 @@
+
+[x-cloak] {
+    display: none !important;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}

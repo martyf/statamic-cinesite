@@ -1,0 +1,32 @@
+<!doctype html>
+<html class="scroll-smooth" lang="{{ site:short_locale }}">
+<head>
+    <title>{{ title }} - {{ site:name }}</title>
+
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    {{ vite src="resources/css/site.css|resources/js/site.js" }}
+    {{ googlefonts }}
+</head>
+<body class="flex flex-col min-h-screen">
+
+{{ partial:partials/header }}
+
+<main class="flex-grow">
+    {{ template_content }}
+</main>
+
+{{ partial:partials/footer }}
+</body>
+</html>

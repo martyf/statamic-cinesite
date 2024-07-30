@@ -1,0 +1,40 @@
+title: 'Common Fields'
+fields:
+  -
+    handle: text_advanced
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - underline
+        - unorderedlist
+        - orderedlist
+        - quote
+        - anchor
+        - removeformat
+        - superscript
+        - subscript
+      smart_typography: true
+      remove_empty_nodes: false
+      antlers: true
+      type: bard
+      display: 'Text Advanced'
+      container: assets
+      sets:
+        sets:
+          display: Sets
+          sets:
+            buttons:
+              display: Buttons
+              icon: download-arrow-down
+              fields:
+                -
+                  import: buttons
+  -
+    handle: text_plain
+    field:
+      antlers: true
+      type: textarea
+      display: 'Text Plain'

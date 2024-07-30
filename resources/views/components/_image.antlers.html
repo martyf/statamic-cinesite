@@ -1,0 +1,39 @@
+{{ _sizes = '(min-width: 400px) 50vw, (min-width: 768px) 75vw, 100vw' }}
+{{ _class = class }}
+{{ _preset = {preset | ensure_right('_')} }}
+
+<picture>
+    {{ if image.mime_type === 'image/gif' || image.mime_type === 'image/webp' }}
+    <img alt="{{ image.alt }}"
+         class="{{ if _class }} {{ _class }} {{ else }} max-w-full {{ /if }}"
+         height="{{ image.height }}"
+         src="{{ image }}"
+         width="{{ image.width }}">
+    {{ else }}
+    <source
+        sizes="{{ _sizes }}"
+        srcset="{{ glide:image preset='{{ $_preset + "xs" }}' format='webp' }} 320w,
+                {{ glide:image preset='{{ $_preset + "sm" }}' format='webp' }} 480w,
+                {{ glide:image preset='{{ $_preset + "md" }}' format='webp' }} 768w,
+                {{ glide:image preset='{{ $_preset + "lg" }}' format='webp' }} 1280w,
+                {{ glide:image preset='{{ $_preset + "xl" }}' format='webp' }} 1440w,
+                {{ glide:image preset='{{ $_preset + "2xl" }}' format='webp' }} 1680w,
+                {{ glide:image preset='{{ $_preset + "3xl" }}' format='webp' }} 1800w"
+                type="image/webp">
+    <source
+        sizes="{{ _sizes }}"
+        srcset="{{ glide:image preset='{{ $_preset + "xs" }}' }} 320w,
+                {{ glide:image preset='{{ $_preset + "sm" }}' }} 480w,
+                {{ glide:image preset='{{ $_preset + "md" }}' }} 768w,
+                {{ glide:image preset='{{ $_preset + "lg" }}' }} 1280w,
+                {{ glide:image preset='{{ $_preset + "xl" }}' }} 1440w,
+                {{ glide:image preset='{{ $_preset + "2xl" }}' }} 1680w,
+                {{ glide:image preset='{{ $_preset + "3xl" }}' }} 1800w"
+                type="{{ image.mime_type }}">
+    <img alt="{{ image.alt }}"
+         class="{{ if _class }} {{ _class }} {{ else }} max-w-full {{ /if }}"
+         height="{{ image.height }}"
+         src="{{ glide:image preset='2xl' }}"
+         width="{{ image.width }}">
+    {{ /if }}
+</picture>

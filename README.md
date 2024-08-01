@@ -1,5 +1,7 @@
 # CineSite demo
 
+![CineSite](/public/assets/logo/cinesite.png)
+
 This is a demo site to accompany Marty Friedel's talk "Statamic: Getting started with Blueprints and Fields".
 
 ## Aim

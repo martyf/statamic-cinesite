@@ -4,7 +4,8 @@
 
 This is a demo site to accompany Marty Friedel's talk "Statamic: Getting started with Blueprints and Fields".
 
-You can watch the talk on [YouTube](https://www.youtube.com/watch?v=blk3M0KfHGg)
+You can watch the talk on [YouTube](https://www.youtube.com/watch?v=blk3M0KfHGg), and find out more on 
+[my website](https://www.martyfriedel.com/blog/blueprints-fields-and-fieldsets-in-statamic).
 
 ## Aim
 

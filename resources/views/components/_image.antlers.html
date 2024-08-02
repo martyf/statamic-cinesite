@@ -19,7 +19,7 @@
                 {{ glide:image preset='{{ $_preset + "xl" }}' format='webp' }} 1440w,
                 {{ glide:image preset='{{ $_preset + "2xl" }}' format='webp' }} 1680w,
                 {{ glide:image preset='{{ $_preset + "3xl" }}' format='webp' }} 1800w"
-                type="image/webp">
+        type="image/webp">
     <source
         sizes="{{ _sizes }}"
         srcset="{{ glide:image preset='{{ $_preset + "xs" }}' }} 320w,
@@ -29,7 +29,7 @@
                 {{ glide:image preset='{{ $_preset + "xl" }}' }} 1440w,
                 {{ glide:image preset='{{ $_preset + "2xl" }}' }} 1680w,
                 {{ glide:image preset='{{ $_preset + "3xl" }}' }} 1800w"
-                type="{{ image.mime_type }}">
+        type="{{ image.mime_type }}">
     <img alt="{{ image.alt }}"
          class="{{ if _class }} {{ _class }} {{ else }} max-w-full {{ /if }}"
          height="{{ image.height }}"

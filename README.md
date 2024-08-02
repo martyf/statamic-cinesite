@@ -4,6 +4,8 @@
 
 This is a demo site to accompany Marty Friedel's talk "Statamic: Getting started with Blueprints and Fields".
 
+You can watch the talk on [YouTube](https://www.youtube.com/watch?v=blk3M0KfHGg)
+
 ## Aim
 
 This site has been built to as a playground to help demonstrate building out Blueprints, Fields and Fieldsets in
@@ -34,11 +36,12 @@ http://statamic-cinesite.test/cp
 
 ## Simplified, on purpose
 
-To keep the focus on Blueprints and Fields, areas of this site have been purposely simplified. For example, there's no
-metadata for pages.
+To keep the focus on Blueprints, Fields and Fieldsets, areas of this site have been purposely simplified. For example, 
+there's no metadata for Pages by default. 
 
 But given this site is a learning tool, this is a great opportunity for you to explore Fields and Blueprints in Statamic
-to extend the site's Blueprints to add support for metadata, such as a customisable Title tag.
+to extend the site's Blueprints to add support for metadata, such as a customisable Title tag: I'll get you started 
+in the [video](https://www.youtube.com/watch?v=blk3M0KfHGg)
 
 We've also removed unnecessary features like mobile menus and contact forms - while they're important parts of a 
 website, for the purpose of this demo, simpler code is more valuable.
@@ -49,6 +52,8 @@ The demo component of the talk went through a number of Blueprint, Field and Fie
 - creating and hooking up a Movies collection
 - outputting variables from your Blueprint
 - exploring Fieldtypes:
+  - basic text
+  - Bard (Statamic's rich text editor)
   - integer
   - date
   - asset
